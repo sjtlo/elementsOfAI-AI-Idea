@@ -1,4 +1,4 @@
-# FailSort – AI triage for failed software tests
+# FailSort – AI assisted intelligent routing for failed software tests
 
 *Building AI course project*
 
