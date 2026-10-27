@@ -1,10 +1,10 @@
-# FailSort – AI triage for failed software tests
+# FailSort – AI assisted assessment for failed software tests
 
 *Building AI course project*
 
 ## Summary
 
-FailSort is an AI assistant that reads the log of a failed software test and predicts why it failed: a broken test environment, bad test data or a real bug. The failure is then routed to the right team at once, instead of bouncing between teams.
+FailSort is an AI assisted assessment agent that reads the log of a failed software test and predicts why it failed: a broken test environment, bad test data or a real bug. The failure is then routed to the right team at once, instead of bouncing between teams.
 
 ## Background
 
@@ -113,7 +113,7 @@ Odds of 13.5 : 1 mean a probability of 13.5 / 14.5 ≈ **93 %** that the failure
 | Baseline | Always guess the most common cause | If 60 % of all failures are environment problems, the model must beat 60 % accuracy to be useful. Precision and recall per cause are reported too. |
 | Later | Logistic regression, neural networks, embeddings | Compared against naive Bayes. Embeddings capture meaning, so *"connection refused"* and *"host unreachable"* end up close together. |
 
-**Proof of concept** – a toy example in Python with [scikit-learn](https://scikit-learn.org/) and fictional log messages:
+**Proof of concept** – example in Python with [scikit-learn](https://scikit-learn.org/) and fictional log messages:
 
 ```python
 from sklearn.feature_extraction.text import CountVectorizer
@@ -181,7 +181,7 @@ FailSort does **not** solve everything:
 
 ## What next?
 
-* **Pilot:** collect an anonymised data set from one team and measure accuracy against the baseline.
+* **Pilot:** collect an synthetic or anonymised data set from one team and measure accuracy against the baseline.
 * **Integration:** connect FailSort to the CI pipeline and the issue tracker, so failures are labelled and routed automatically.
 * **Smarter search:** use embeddings and a vector database (for example OpenSearch k-NN) to find failures with similar *meaning*, not just similar words.
 * **Suggested fixes (RAG):** show how similar failures were solved before, using runbooks and earlier tickets.
@@ -192,7 +192,7 @@ To get there, the project needs people with skills in DevOps, test data, softwar
 
 ## Acknowledgments
 
-* Inspired by the [Elements of AI](https://www.elementsofai.com/) and [Building AI](https://buildingai.elementsofai.com/) courses by Reaktor Innovations and the University of Helsinki, and by my own work with test environments and test data.
+* Inspired by the [Elements of AI](https://www.elementsofai.com/) and [Building AI](https://buildingai.elementsofai.com/) courses by Reaktor Innovations and the University of Helsinki, and by Kjetil Øien´s work with test environments and test data for 20 years.
 * README structure based on the Building AI project template.
 * Statistics on flaky tests: John Micco, [*Flaky Tests at Google and How We Mitigate Them*](https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html), Google Testing Blog, 2016.
 * The proof of concept uses [scikit-learn](https://scikit-learn.org/) (BSD license).
