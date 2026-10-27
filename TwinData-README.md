@@ -8,7 +8,7 @@ TwinData creates realistic but fake test data, so no real customer data is neede
 
 ## Background
 
-Software must be tested with data that looks real. Today, test data is often made by copying production data and *masking* it – hiding names, ID numbers and other personal details. This has three problems:
+Software must be tested with data that looks real. Today, test data is often made by copying production data and *masking* (syntethic or anonymised data) – hiding names, ID numbers and other personal details. This has three problems:
 
 * **Privacy risk.** Masking is complex, and one mistake can expose real people. In a 2024 survey by a data company, 54 % of organisations said they had already experienced a breach or theft of sensitive data in non-production environments such as test and development ([Perforce, 2024](https://www.perforce.com/press-releases/delphix-state-data-compliance-and-security-report-reveals)).
 * **Missing edge cases.** Real data rarely contains the unusual combinations testers need – for example a 19-year-old with three claims in one year.
@@ -18,7 +18,7 @@ The GDPR also requires *data protection by design and by default*: by default, o
 
 **How common is it?** Every organisation in the EU and EEA that tests software on customer data faces this – banks, insurers, public services and online shops alike.
 
-**My motivation:** I work with test environments and test data. Getting good test data often means copying production data and masking it – slow and risky work. I want to explore how AI can make test data safe by design, so that no real person ever needs to end up in a test environment.
+**My motivation:** I work with test environments and test data. Getting good test data often means copying production data and making the data syntethic – slow and risky work. I want to explore how AI can make test data safe by design, so that no real person ever needs to end up in a test environment, or are traced back to the production data.
 
 ## How is it used?
 
@@ -172,7 +172,7 @@ Collaborators are welcome – especially people with skills in test data, data p
 
 ## Acknowledgments
 
-* Inspired by the [Elements of AI](https://www.elementsofai.com/) and [Building AI](https://buildingai.elementsofai.com/) courses by Reaktor Innovations and the University of Helsinki, and by my own work with test data.
+* Inspired by the [Elements of AI](https://www.elementsofai.com/) and [Building AI](https://buildingai.elementsofai.com/) courses by Reaktor Innovations and the University of Helsinki, and by Kjetil Øien´s 20 years work with test data.
 * README structure based on the Building AI project template.
 * Gender and insurance prices: [*Europe court rules insurance companies may not set rates based on gender*](https://www.jurist.org/news/2011/03/europe-court-rules-insurance-companies-may-not-set-rates-based-on-gender/), JURIST, 2011.
 * Data protection by design and by default: [GDPR Article 25](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
